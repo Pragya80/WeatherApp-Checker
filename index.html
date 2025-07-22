@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Clouds container, can be toggled based on weather or removed for static background -->
+    <div class="clouds-container" id="cloudsContainer">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-3">Weather Forecast</h1>
+
+        <div class="flex flex-col sm:flex-row gap-3 mb-3 input-group">
+            <input type="text" id="cityInput" placeholder="Directly click on 'Check' button or manually enter city name" class="flex-1">
+            <button id="getWeatherBtn" class="flex-none">Check</button>
+            <button id="voiceSearchBtn" class="flex-none">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner"></div>
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <div id="currentWeather" class="weather-card hidden">
+            <div class="card-text-content">
+                <h2 class="text-xl font-semibold text-gray-700 mb-1" id="currentCity"></h2>
+                <p class="temp-display" id="currentTemp"></p>
+                <p class="fahrenheit-temp" id="currentFahrenheitTemp"></p>
+                <p class="description-text" id="currentDescription"></p>
+                <p class="humidity-wind-text" id="currentHumidityWind"></p>
+            </div>
+            <img id="movableIllustration" src="" alt="">
+        </div>
+
+        <div id="forecast" class="hidden">
+            <h2 class="text-xl font-semibold text-gray-700 mb-2 text-center">3-Day Forecast</h2>
+            <div id="forecastContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer class="mt-8 text-center text-gray-600 text-xs">
+        Copyright &copy; made with &#x2764; by Pragya
+    </footer>
+</body>
+</html>
