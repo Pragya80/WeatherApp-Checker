@@ -48,12 +48,6 @@ WeatherApp-Checker/
 ├── style.css           # Stylesheet
 ├── script.js           # JavaScript logic
 └── README.md           # Project documentation
-✨ Future Improvements
-🌤️ Add 7-day forecast
-
-🌓 Dark mode toggle
-
-🔔 Weather alerts for extreme conditions
 
 🙋‍♀️ Author
 Made with ❤️ by Pragya Singh
